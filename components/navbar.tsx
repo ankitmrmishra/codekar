@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import { Atomic_Age } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { PanelLeftCloseIcon, PanelRightCloseIcon } from "lucide-react";
+import {
+  ArrowRight,
+  PanelLeftCloseIcon,
+  PanelRightCloseIcon,
+} from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
@@ -20,9 +24,9 @@ const navLinks = [
 export default function Navbar() {
   const [mobileopen, setmobileopen] = useState(false);
   return (
-    <div className="px-4 bg-black  text-white py-3 my-1 rounded-2xl">
+    <div className="  text-white flex fixed z-50 justify-center items-center align-middle pb-5 left-0 right-0 top-0">
       {/* here i am firstly creating the mobile version of the navbar */}
-      <div className="mobileversion flex justify-between align-middle items-center">
+      <div className="mobileversion backdrop-blur-3xl  min-w-[95vw]  flex justify-between align-middle items-center md:hidden py-3 my-1 rounded-2xl px-4">
         {/* ///////////////////////// */}
         {/* firstly here goes the logo */}
         <div className={cn("logo text-3xl font-bold", logofont.className)}>
@@ -43,14 +47,14 @@ export default function Navbar() {
         {mobileopen ? (
           <div className=" h-screen w-screen bg-black top-0 fixed">
             <div className=" bg-red-200">
-              <div className=" bg-[#4E71FF] max-w-max p-2 my-5 fixed right-5 rounded-lg">
+              <div className=" bg-lime-green max-w-max p-2 my-5 fixed right-5 rounded-lg">
                 <PanelRightCloseIcon
                   onClick={() => setmobileopen((prev) => !prev)}
-                  className="text-white size-8"
+                  className="text-black size-8"
                 />
               </div>
               <div className="  max-w-max top-5 fixed left-10 rounded-lg">
-                <Button className="text-xl bg-[#4E71FF] font-semibold py-5">
+                <Button className="text-xl text-black bg-lime-green font-semibold py-5">
                   Battle Now
                 </Button>
               </div>
@@ -58,7 +62,7 @@ export default function Navbar() {
             <div className="items flex flex-col justify-center gap-5 align-middle h-full ">
               {navLinks.map((nav, idx) => (
                 <Link
-                  className="text-2xl text-[#4E71FF] w-full flex justify-center align-middle items-center flex-col"
+                  className="text-2xl hover:text-lime-green text-white w-full flex justify-center align-middle items-center flex-col"
                   key={idx}
                   href={nav.link}
                 >
@@ -69,6 +73,43 @@ export default function Navbar() {
             </div>
           </div>
         ) : null}
+      </div>
+
+      {/* NOW FOR THE DESKTOP VERSION */}
+
+      <div className=" mx-auto desktopnavbar min-w-7xl bg-gradient-to-b  text-white   backdrop-blur-3xl   hidden md:flex justify-between align-middle items-center  py-3 my-1 rounded-2xl px-4">
+        <div
+          className={cn(
+            "logo text-3xl text-white font-bold",
+            logofont.className
+          )}
+        >
+          <span>CODE</span>
+          <span>KAR</span>
+        </div>
+        <div className="items flex items-center align-middle  justify-center  h-full  min-w-2xl gap-8">
+          {navLinks.map((nav, idx) => (
+            <Link
+              className="text-base text-white hover:text-lime-green w-full flex justify-center align-middle items-center flex-col max-w-max"
+              key={idx}
+              href={nav.link}
+            >
+              {nav.Item}
+            </Link>
+          ))}
+        </div>
+        <div className="flex gap-3 justify-center align-middle items-center">
+          <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-full text-lg">
+            <span>Join the Arena </span>{" "}
+            <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
+          </Button>
+          <Button
+            variant={"link"}
+            className=" text-white  py-z relative h-full hover:cursor-pointer text-lg"
+          >
+            LogIn
+          </Button>
+        </div>
       </div>
     </div>
   );
