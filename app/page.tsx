@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Cover } from "@/components/ui/cover";
+
 import MovingcardHeader from "@/components/ui/Headermovingbanner";
 import { SparklesCore } from "@/components/ui/Sparkles";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 
 export default function Home() {
   return (
