@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import BentoGrid from "@/components/ui/BentoGrid";
 
 const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 
@@ -154,6 +155,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BentoGrid />
     </div>
   );
 }
