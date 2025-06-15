@@ -186,7 +186,7 @@ export default function Testimonial() {
           <span className="text-white/50">From All Over the World</span>
         </div>
         <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center max-w-max relative h-12 text-lg">
-          <span>Explore More about CodeKar</span>{" "}
+          <span>Read More Succes Stories</span>{" "}
           <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
         </Button>
       </div>
