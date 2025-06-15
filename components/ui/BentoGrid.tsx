@@ -9,11 +9,11 @@ import { ArrowRight } from "lucide-react";
 
 export default function BentoGrid() {
   return (
-    <div className=" flex justify-center align-middle items-center flex-col gap-6 md:gap-0">
+    <div className=" flex justify-center align-middle items-center flex-col  gap-6 ">
       <div className="head w-full text-start text-white text-4xl font-medium px-2 py-5">
         What is on Codekar
       </div>
-      <div className="grid   grid-cols-1 md:grid-cols-8 md:grid-rows-8 w-full md:h-screen gap-5  text-white ">
+      <div className="grid  max-h-max  grid-cols-1 md:grid-cols-8 md:grid-rows-7 w-full  gap-5  text-white ">
         {/* bento Card 1 */}
         <div className="md:col-span-3 flex flex-col justify-end items-start gap-5   row-span-8 md:row-span-7 border border-lime-green/20 rounded-3xl py-5 px-3 relative  overflow-clip bg-[#D2FF8E]/6">
           <div className="bg-lime-green py-1 rounded-full px-5 text-black font-medium shadow-lg/20 border-white/70 border shadow-lime-green  top-5 left-5">
@@ -107,10 +107,12 @@ export default function BentoGrid() {
           </div>
         </div>
       </div>
-      <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-12 text-lg">
-        <span>Explore More about CodeKar</span>{" "}
-        <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
-      </Button>
+      <div className="">
+        <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-12 text-lg">
+          <span>Explore More about CodeKar</span>{" "}
+          <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
+        </Button>
+      </div>
     </div>
   );
 }
