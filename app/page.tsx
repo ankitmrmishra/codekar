@@ -15,6 +15,7 @@ import BentoGrid from "@/components/ui/BentoGrid";
 import Testimonial from "@/components/ui/Testimonial";
 import CTA from "@/components/ui/CTA";
 import Community from "@/components/ui/Community";
+import FAQs from "@/components/ui/FAQs";
 
 const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 
@@ -163,6 +164,7 @@ export default function Home() {
       <Testimonial />
       <CTA />
       <Community />
+      <FAQs />
     </div>
   );
 }
