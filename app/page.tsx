@@ -16,6 +16,7 @@ import Testimonial from "@/components/ui/Testimonial";
 import CTA from "@/components/ui/CTA";
 import Community from "@/components/ui/Community";
 import FAQs from "@/components/ui/FAQs";
+import HowItWorksSection from "@/components/ui/HowItWorksSection";
 
 const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 
@@ -165,6 +166,7 @@ export default function Home() {
       <CTA />
       <Community />
       <FAQs />
+      <HowItWorksSection />
     </div>
   );
 }

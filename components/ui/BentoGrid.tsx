@@ -71,7 +71,7 @@ export default function BentoGrid() {
                 height={100}
                 className="object-cover size-12 rounded-full"
               />
-              <div className="bg-lime-green rounded-tl-2xl rounded-tr-2xl rounded-br-2xl h-8 px-6 justify-center flex items-center align-middle text-black w-2/4 py-3 text-lg font-medium ">
+              <div className="bg-lime-green rounded-tl-2xl rounded-tr-2xl rounded-br-2xl h-8 px-6 justify-center flex items-center align-middle text-black w-2/4 py-3 lg:text-lg font-medium min-h-max min-w-max">
                 Badhia Khele Ho ekdm
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function BentoGrid() {
                 height={100}
                 className="object-cover size-12 rounded-full"
               />
-              <div className="bg-lime-green rounded-tl-2xl rounded-tr-2xl rounded-br-2xl h-8 px-6 justify-center flex items-center align-middle text-black w-3/4 md:py-5 py-8 text-lg font-medium  leading-4">
+              <div className="bg-lime-green rounded-tl-2xl rounded-tr-2xl rounded-br-2xl h-8 px-6 justify-center flex items-center align-middle text-black w-3/4 md:py-5 py-8 lg:text-lg font-medium  leading-4">
                 Badhia Khele Ho ekdm, thoda sudhar ki jarurat hai
               </div>
             </div>

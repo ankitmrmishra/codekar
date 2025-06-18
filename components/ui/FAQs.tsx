@@ -13,7 +13,7 @@ export default function FAQs() {
     setCategory(categoryies === index ? 0 : index);
   };
   return (
-    <div className="lg:max-w-7xl max-w-max flex justify-center align-middle items-center flex-col gap-10 lg:min-h-screen h-full   lg:py-50 py-5">
+    <div className="lg:max-w-7xl max-w-max flex justify-center align-middle items-center flex-col gap-10 lg:min-h-screen h-full    py-5">
       <div className="headingsandsubheadings text-white text-center">
         <div className="heading lg:text-6xl text-3xl ">
           Frequently Asked Questions
@@ -25,31 +25,37 @@ export default function FAQs() {
         </div>
       </div>
       <div className="system lg:min-w-3xl flex  lg:max-w-6xl ">
-        <div className="lg:p-10 relative  lg:w-7xl ">
+        <div className="lg:p-10 relative  lg:w-7xl min-h-max grid md:grid-cols-6 grid-cols-1  ">
           {/* 
           
           
           */}
-          {FAQdata.map((category, index) => (
-            <div key={index} className="grid md:grid-cols-6 grid-cols-1  ">
-              <div className=" col-span-1 flex flex-col justify-center align-middle items-start  ">
-                <div
-                  onClick={() => toggleCategory(index)}
-                  className={cn(
-                    "text-white  hover:cursor-pointer hover:bg-lime-green hover:text-black  max-w-max px-3 py-1 rounded-lg flex justify-start align-middle items-start   gap-2 text-xl my-2  ",
-                    categoryies === index && "text-lime-green"
-                  )}
-                >
+          <div className="col-span-1 flex md:flex-col md:flex-nowrap flex-wrap justify-center md:justify-start align-middle md:items-start items-center  ">
+            {FAQdata.map((category, index) => (
+              <div key={index} className="">
+                <div className=" col-span-1 flex flex-col justify-center align-middle items-start  ">
                   <div
+                    onClick={() => toggleCategory(index)}
                     className={cn(
-                      "w-[5px] h-[1.5rem] bg-lime-green rounded-2xl",
-                      index !== categoryies ? "hidden" : "block"
+                      "text-white  hover:cursor-pointer hover:text-lime-green  max-w-max px-3 py-1 rounded-lg flex justify-center align-middle items-center   gap-2 text-xl my-2  ",
+                      categoryies === index && "text-lime-green"
                     )}
-                  />
-                  {category.category}
+                  >
+                    <div
+                      className={cn(
+                        "w-[5px] h-[1.5rem] bg-lime-green rounded-2xl",
+                        index !== categoryies ? "hidden" : "block"
+                      )}
+                    />
+                    {category.category}
+                  </div>
                 </div>
               </div>
-              <div className="lg:col-span-5 lg:absolute  left-[20rem] top-10">
+            ))}
+          </div>
+          <div className="col-span-5">
+            {FAQdata.map((category, index) => (
+              <div key={index} className=" lg:col-span-5   left-[20rem] top-10">
                 {categoryies === index ? (
                   <div className="text-white   flex justify-start align-top items-start flex-col  transition ease-in-out duration-1000 ">
                     {category.faqs.map((questions, index) => (
@@ -79,8 +85,8 @@ export default function FAQs() {
                   </div>
                 ) : null}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -45,19 +45,20 @@ export default function Navbar() {
         {/* Mobile Navbar starts here */}
 
         {mobileopen ? (
-          <div className=" h-screen w-screen bg-black top-0 fixed">
+          <div className=" h-screen w-screen bg-black -top-2 fixed">
             <div className=" bg-red-200">
-              <div className=" bg-lime-green max-w-max p-2 my-5 fixed right-5 rounded-lg">
+              <div className="  max-w-max p-2 my-5 fixed right-5 rounded-lg">
                 <PanelRightCloseIcon
+                  color="#9DFF08"
                   onClick={() => setmobileopen((prev) => !prev)}
                   className="text-black size-8"
                 />
               </div>
-              <div className="  max-w-max top-5 fixed left-10 rounded-lg">
+              {/* <div className="  max-w-max top-5 fixed left-10 rounded-lg">
                 <Button className="text-xl text-black bg-lime-green font-semibold py-5">
                   Battle Now
                 </Button>
-              </div>
+              </div> */}
             </div>
             <div className="items flex flex-col justify-center gap-5 align-middle h-full ">
               {navLinks.map((nav, idx) => (

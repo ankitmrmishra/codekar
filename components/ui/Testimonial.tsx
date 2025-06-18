@@ -29,7 +29,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover  h-[150px] w-[120px] rounded-2xl"
+              className="object-cover  hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
           <div className="bg-white/5 h-[150px] w-[120px] rounded-2xl">
@@ -38,7 +38,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
           <div className="bg-white/5 h-[150px] w-[120px] rounded-2xl">
@@ -61,7 +61,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
           <div className="bg-white/5 h-[150px] w-[120px] rounded-2xl">
@@ -149,7 +149,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function Testimonial() {
               alt=""
               width={500}
               height={500}
-              className="object-cover h-[150px] w-[120px] rounded-2xl"
+              className="object-cover  hover:scale-105 transition ease-in-out duration-300 h-[150px] w-[120px] rounded-2xl"
             />
           </div>
           <div className="bg-white/5 h-[150px] w-[120px] rounded-2xl">
