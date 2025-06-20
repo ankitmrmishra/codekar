@@ -24,14 +24,14 @@ const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 export default function Home() {
   return (
     <div className="flex flex-col justify-center align-middle items-center md:px-32 gap-10 overflow-clip ">
-      <div className="  flex flex-col justify-center align-middle items-center  md:py-32 gap-10   ">
+      <div className="  flex flex-col justify-center align-middle items-center  md:py-32 gap-10  max-w-screen md:max-w-full   ">
         <div className="absolute inset-0 bg-[url('/Grid.svg')] opacity-5 pointer-events-none" />
 
         {/* this is hero section */}
-        <div className="max-w-7xl py-24  pb-10 min-h-max  rounded-2xl  flex md:flex-row flex-col justify-center align-middle items-center">
+        <div className="md:max-w-7xl mx-5  py-24   pb-10 min-h-max bg-red-900 rounded-2xl  flex md:flex-row flex-col justify-center align-middle items-center">
           {/* Now the main hero section starts */}
-          <div className="heading flex flex-col justify-start align-middle items-start relative md:py-14 py-5 gap-4  max-w-3xl">
-            <span className=" min-w-52  flex justify-center align-middle items-center text-center  border border- text-white bg-lime-green/25 border-lime-green  py-1  rounded-2xl font-semibold">
+          <div className="  flex flex-col justify-start align-middle items-start relative md:py-14 py-5 gap-4 p-10 md:max-w-3xl max-w-xl">
+            <span className=" md:min-w-52   flex justify-center align-middle items-center text-center  border border- text-white bg-lime-green/25 border-lime-green  py-1  rounded-2xl font-semibold ">
               Level Up Your Web Skills
             </span>
             <span
