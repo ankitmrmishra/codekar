@@ -24,13 +24,13 @@ const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 export default function Home() {
   return (
     <div className="flex flex-col justify-center align-middle items-center md:px-32 gap-10 overflow-clip ">
-      <div className="  flex flex-col justify-center align-middle items-center  md:py-32 gap-10  max-w-screen md:max-w-full   ">
+      <div className="  flex flex-col justify-center align-middle items-center  md:py-32 gap-10   md:max-w-full max-w-[90vw]    ">
         <div className="absolute inset-0 bg-[url('/Grid.svg')] opacity-5 pointer-events-none" />
 
         {/* this is hero section */}
-        <div className="md:max-w-7xl mx-5  py-24   pb-10 min-h-max bg-red-900 rounded-2xl  flex md:flex-row flex-col justify-center align-middle items-center">
+        <div className="md:max-w-7xl    py-24   pb-10 min-h-max  rounded-2xl  flex md:flex-row flex-col justify-center align-middle items-center">
           {/* Now the main hero section starts */}
-          <div className="  flex flex-col justify-start align-middle items-start relative md:py-14 py-5 gap-4 p-10 md:max-w-3xl max-w-xl">
+          <div className="  flex flex-col justify-start align-middle items-start relative md:py-14 py-5 gap-4 md:max-w-3xl max-w-[90vw]">
             <span className=" md:min-w-52   flex justify-center align-middle items-center text-center  border border- text-white bg-lime-green/25 border-lime-green  py-1  rounded-2xl font-semibold ">
               Level Up Your Web Skills
             </span>
@@ -73,8 +73,8 @@ export default function Home() {
               </span>
             </div>
 
-            <div className=" flex gap-3 relative ">
-              <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-full text-lg">
+            <div className=" flex md:flex-row flex-col gap-3 relative w-full ">
+              <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-full text-lg w-full md:max-w-max">
                 <span>Join the Arena </span>{" "}
                 <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
               </Button>
@@ -109,8 +109,8 @@ export default function Home() {
         </div>
 
         {/* this is why us section */}
-        <section className="flex  md:flex-row flex-col gap-10 py-10   min-[]:h-[100vh] justify-center  align-middle items-center ">
-          <div className="leftpart max-w-2xl">
+        <section className="flex  md:flex-row flex-col gap-10 py-10   min-h-[100vh] justify-center  align-middle items-center ">
+          <div className="leftpart md:max-w-2xl max-w-[90vw]">
             <h1 className="md:text-6xl text-4xl font-medium text-white">
               Why <span className="text-lime-green">CodeKar</span>? <br />
               Because Web Dev Isn&apos;t Just Code It&apos;s Craft.
