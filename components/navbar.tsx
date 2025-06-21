@@ -10,8 +10,23 @@ import {
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
+import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { redirect } from "next/navigation";
 
 const logofont = Atomic_Age({ weight: ["400"], subsets: ["latin"] });
+
+/**
+ *
+ */
 
 const navLinks = [
   { Item: "Battle Arena", link: "/challenges" },
@@ -23,6 +38,18 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileopen, setmobileopen] = useState(false);
+
+  /**
+   * this here i am getting the server session to get whether the user is signed in or not
+   * if it is not signed in i will display the same login and join buttons
+   * if it is signed in i have to extract the user data and i have to create the profile section
+   *
+   */
+
+  const { data: session } = useSession();
+
+  const userprofileImage: string | null | undefined = session?.user?.image;
+
   return (
     <div className="  text-white flex fixed z-50 justify-center items-center align-middle pb-5 left-0 right-0 top-0">
       {/* here i am firstly creating the mobile version of the navbar */}
@@ -41,8 +68,25 @@ export default function Navbar() {
           className="size-8"
           onClick={() => setmobileopen((prev) => !prev)}
         />
-
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
         {/* Mobile Navbar starts here */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
+        {/* ///////////////////////// */}
 
         {mobileopen ? (
           <div className=" h-screen w-screen bg-black -top-2 fixed">
@@ -75,8 +119,25 @@ export default function Navbar() {
           </div>
         ) : null}
       </div>
-
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
       {/* NOW FOR THE DESKTOP VERSION */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
+      {/* ///////////////////////// */}
 
       <div className=" mx-auto desktopnavbar min-w-7xl bg-gradient-to-b  text-white   backdrop-blur-3xl   hidden md:flex justify-between align-middle items-center  py-3 my-1 rounded-2xl px-4">
         <div
@@ -99,17 +160,58 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex gap-3 justify-center align-middle items-center">
-          <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-full text-lg">
-            <span>Join the Arena </span>{" "}
-            <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
-          </Button>
-          <Button
-            variant={"link"}
-            className=" text-white  py-z relative h-full hover:cursor-pointer text-lg"
-          >
-            LogIn
-          </Button>
+        {/* Here we are working on the profile and login and logout and profile if session found */}
+        <div className="">
+          {session?.user ? (
+            <div className="outline-none">
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <div className="white group ">
+                    <Image
+                      src={userprofileImage || ""}
+                      alt=""
+                      width={500}
+                      height={500}
+                      className="size-14 rounded-full mx-auto object-cover group-hover:border group-hover:border-lime-green"
+                    />
+                  </div>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="text-lime-green bg-black">
+                  <DropdownMenuLabel className="text-white/20">
+                    My Account
+                  </DropdownMenuLabel>
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem
+                      className="hover:bg-lime-green hover:text-black hover:font-medium"
+                      onClick={() => redirect("/Userprofile")}
+                    >
+                      Profile
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      className="hover:bg-lime-green hover:text-black hover:font-medium"
+                      onClick={() => signOut()}
+                    >
+                      Logout
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          ) : (
+            <div className="flex gap-3 justify-center align-middle items-center">
+              <Button className="bg-lime-green text-black transition duration-300 hover:cursor-pointer hover:bg-white group rounded-full text-center  flex justify-center align-middle items-center  relative h-full text-lg">
+                <span>Join the Arena </span>{" "}
+                <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
+              </Button>
+              <Button
+                onClick={() => signIn("github")}
+                variant={"link"}
+                className=" text-white  py-z relative h-full hover:cursor-pointer text-lg"
+              >
+                LogIn
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
