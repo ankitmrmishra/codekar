@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Roboto } from "next/font/google";
 import {
@@ -18,13 +19,16 @@ import Community from "@/components/ui/Community";
 import FAQs from "@/components/ui/FAQs";
 import HowItWorksSection from "@/components/ui/HowItWorksSection";
 import Footer from "@/components/ui/Footer";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 
 export default function Home() {
   return (
     <div className="flex flex-col justify-center align-middle items-center md:px-32 gap-10 overflow-clip ">
-      <div className="  flex flex-col justify-center align-middle items-center  md:py-32 gap-10   md:max-w-full max-w-[90vw]    ">
+      <div className="  flex flex-col justify-center align-middle items-center  md:py-32 gap-10   md:max-w-full max-w-[90vw]">
         <div className="absolute inset-0 bg-[url('/Grid.svg')] opacity-5 pointer-events-none" />
 
         {/* this is hero section */}
@@ -125,7 +129,7 @@ export default function Home() {
               <ArrowRight className="group-hover:rotate-0 -rotate-45 delay-100 duration-300 ease-in-out transition bg-black p-1 size-8 text-white rounded-full " />
             </Button>
           </div>
-          <div className="border border-white/20 rounded-4xl w-full max-w-max grid md:grid-cols-2 grid-cols-1 text-white items-center place-content-center place-items-center p-2 relative gap-2 ">
+          <div className="md:border border-white/20 rounded-4xl w-full max-w-max grid md:grid-cols-2 grid-cols-1 text-white items-center place-content-center place-items-center  relative gap-2 ">
             <div className="absolute left-0 right-0">
               <Globe
                 color="#9DFF08"
