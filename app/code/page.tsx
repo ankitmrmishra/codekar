@@ -1,8 +1,7 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
-import React, { useEffect } from "react";
+
+import React from "react";
 import FrontendQuestions from "./Frontend-Questions";
 
 function page() {

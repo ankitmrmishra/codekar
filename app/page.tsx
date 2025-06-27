@@ -19,9 +19,6 @@ import Community from "@/components/ui/Community";
 import FAQs from "@/components/ui/FAQs";
 import HowItWorksSection from "@/components/ui/HowItWorksSection";
 import Footer from "@/components/ui/Footer";
-import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
-import { useEffect } from "react";
 
 const HeroFont = Roboto({ weight: ["600"], subsets: ["cyrillic"] });
 
